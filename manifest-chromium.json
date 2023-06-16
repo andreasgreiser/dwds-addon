@@ -1,0 +1,45 @@
+{
+
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "0.2.0",
+  
+  "omnibox": { "keyword" : "dwds" },
+
+  "default_locale": "de",
+
+  "icons": {
+    "16": "icons/favicon-16.png",
+    "32": "icons/favicon-32.png",
+    "48": "icons/favicon-48.png",
+    "64": "icons/icon-64.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "contextMenus",
+    "search"
+  ],
+
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "DWDS",
+      "search_url": "https://www.dwds.de/?q={searchTerms}",
+      "keyword": "dwds",
+      "favicon_url": "/icons/favicon-32.png",
+      "is_default": false,
+      "encoding": "UTF-8"
+    }
+  },
+
+  "author": "Adrien Barbaresi",
+  "homepage_url": "https://github.com/zentrum-lexikographie/dwds-addon"
+
+}
